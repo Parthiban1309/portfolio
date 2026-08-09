@@ -256,6 +256,16 @@
   opacity: 1;
   transform: translateX(0);
 }
+/* Touch has no hover, so a hover-only affordance simply never appears —
+   every card on a phone was hiding the one label that says it opens a case
+   study. Where there is no pointer to hover with, the label is just always
+   on. (The card itself was always tappable; this restores the signal.) */
+@media (hover: none) {
+  .open {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 /* ---------- foot: counter · dots · hint ---------- */
 .foot {
